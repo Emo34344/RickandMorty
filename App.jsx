@@ -1,9 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native';
+import TabRouter from '../src/router/tabRouter';
 
 const App = () => {
   return (
     <NavigationContainer>
-      {/* Rest of your app code */}
+      <TabRouter />
     </NavigationContainer>
   );
 };
