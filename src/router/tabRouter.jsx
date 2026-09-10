@@ -5,6 +5,9 @@ import Episodes from '../screens/episodes';
 import Locations from '../screens/locations';
 import Settings from '../screens/settings';
 import { CHARACTERS, EPISODES, LOCATIONS, SETTINGS } from '../utils/routes';
+import TabIcon from '../components/router/tabicon';
+import tabBarStyle from '../styles/tabBarStyle';
+import Colors from '../theme/colors';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,8 +16,17 @@ const TabRouter = () => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => (
-          null
+          <TabIcon 
+          screenName={route.name} 
+          focused={focused} 
+          color={color} 
+          size={size} />
         ),
+        headerStyle: tabBarStyle.headerStyle,
+        TabBarStyle: tabBarStyle.TabBarStyle,
+
+        tabBarActiveTintColor: Colors.PRIMARY,
+         
       })}
     >
       <Tab.Screen name={CHARACTERS} component={Characters} />
