@@ -8,6 +8,7 @@ import { CHARACTERS, EPISODES, LOCATIONS, SETTINGS } from '../utils/routes';
 import TabIcon from '../components/router/tabicon';
 import tabBarStyle from '../styles/tabBarStyle';
 import Colors from '../theme/colors';
+import  TabRouter  from '../TabRouter';
 
 const Tab = createBottomTabNavigator();
 
